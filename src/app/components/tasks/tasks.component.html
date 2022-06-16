@@ -1,2 +1,3 @@
-<p *ngFor='let task of tasks'>{{task.text}}</p>
-<!-- the idea is to loop over the array and output the tasks into html, using directive called ngFor -->
+<app-task-item *ngFor='let task of tasks' [task]='task'></app-task-item>
+<!-- the idea is to loop over the array and output the tasks into html, using directive called ngFor
+I created a specific component called task-item to displayed each individual task, then I passed in a property called task which is equal to the specific task for each interation.-->
