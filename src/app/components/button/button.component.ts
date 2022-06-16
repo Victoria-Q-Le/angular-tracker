@@ -19,6 +19,7 @@ export class ButtonComponent implements OnInit {
     this.btnClick.emit()
 
   }
+  // button is reusable component depends on where I leave it, therefore output and EventEmitter were used to sent the event (click) from the chil back to the parent to cascade to act of logging toogle to the console.
 
 
 
