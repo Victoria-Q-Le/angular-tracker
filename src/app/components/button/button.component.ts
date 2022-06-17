@@ -6,8 +6,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent implements OnInit {
-  @Input() text?: string; // ran into err TS 2564: on initializer and not definitely assigned in the constructor. Compiler was silenced by stating the variable may be optional.
-  @Input() color?: string;
+  @Input() text: string; // ran into err TS 2564: on initializer and not definitely assigned in the constructor. Compiler was silenced by stating the variable may be optional.
+  @Input() color: string;
 
   @Output() btnClick = new EventEmitter()
 
