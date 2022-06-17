@@ -4,6 +4,12 @@ import {Observable, of} from 'rxjs'
 import {Task} from '../Task'
 // import {TASKS} from '../mock-tasks' - the data are now coming from the backend, so I no longer need the mock data
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -30,5 +36,11 @@ export class TaskService {
     const url = `${this.apiUrl}/${task.id}`;
     return this.http.delete<Task>(url);
   }
-  // in order to delete, an url similar to apiurl is required with the task id, this also returns an Observable  
+  // in order to delete, an url similar to apiurl is required with the task id, this also returns an Observable
+
+  updateTaskReminder(task: Task): Observable<Task> {
+    const url = `${this.apiUrl}/${task.id}`;
+    return this.http.put<Task>(url, task, httpOptions);
+  }
+  // I sent in the url with the task, meaning sending data (the header with content type)
 }

@@ -1,4 +1,7 @@
-<div class='task'>
+<div
+  class='task'
+  [ngClass] = "{reminder: task.reminder}"
+  (dblclick) = "onToggle(task)">
   <h3>{{task.text}}
     <fa-icon
       [ngStyle]= "{'color':'red'}"
@@ -8,3 +11,5 @@
   </h3>
   <h3>{{task.day}}</h3>
 </div>
+
+<!-- since the reminder is a conditional statement, I used [ngClass] to set the class of the div to reminder if the task.reminder is true. I want the user to be able to quickly change the reminder from false to true and vice versa by doule clicking, thus I added an event to the div itself  -->

@@ -31,4 +31,13 @@ export class TasksComponent implements OnInit {
       .subscribe(() => (this.tasks = this.tasks.filter((t) => t.id !== task.id)))
   }
   // similar to getTasks, I changed this to deleteTask with specific task as an argument. This wont give me anything back but I want such task to disappear from the UI by filter it out. Therefore the return tasks are not equal to the id of the deleted task.
+
+  toggleReminder(task: Task) {
+    task.reminder = !task.reminder;
+    // console.log(task.reminder);
+    this.taskService
+      .updateTaskReminder(task)
+      .subscribe()
+
+  }
 }
