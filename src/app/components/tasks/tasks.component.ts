@@ -23,4 +23,8 @@ export class TasksComponent implements OnInit {
   }
   // this will be fired off right away as I left it in ngOnInit
 
+  deleteTask(task: Task) {
+    this.taskService.deleteTask(task).subscribe(() => (this.tasks = this.tasks.filter((t) => t.id! === task.id)))
+  }
+  // similar to getTasks, I changed this to deleteTask with specific task as an argument. This wont give me anything back but I want it to disappear from the UI
 }

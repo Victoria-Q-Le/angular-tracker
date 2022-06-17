@@ -25,4 +25,10 @@ export class TaskService {
     return this.http.get<Task[]>(this.apiUrl)
     // this is how we get data from a client http/backend
   }
+
+  deleteTask (task: Task): Observable<Task> {
+    const url = `${this.apiUrl}/${task.id}`;
+    return this.http.delete<Task>(url);
+  }
+  // in order to delete, an url similar to apiurl is required with the task id, this also returns an Observable  
 }
