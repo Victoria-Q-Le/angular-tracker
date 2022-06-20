@@ -43,4 +43,8 @@ export class TaskService {
     return this.http.put<Task>(url, task, httpOptions);
   }
   // I sent in the url with the task, meaning sending data (the header with content type)
+
+  addTask(task: Task): Observable<Task> {
+    return this.http.post<Task>(this.apiUrl, task, httpOptions);
+  }
 }
