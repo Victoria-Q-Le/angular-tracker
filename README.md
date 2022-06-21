@@ -1,27 +1,25 @@
 # Task Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
+Task Tracker is a full crud app that allows users to create a to do list to keep track to their tasks.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Tak Tracker is a code along project to help me learn Angular as well as getting familar with Angular new concepts with the help of Brad (https://www.youtube.com/watch?v=3dHNOWTI7H8).
 
-## Code scaffolding
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.Task Tracker includes 2 routes link to the about page and the home page. Depend on the page, each will contain different components. The home page will display the tasks, there is also a Add button for users to quickly add a task to their todo list. The About page does not have this button component. Users can navigate between pages, giving the users the experience of multiple pages application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The backend of this project is a mock server using JSON Server (https://www.npmjs.com/package/json-server), this healps developers to create a quick back-end for prototyping and mocking
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Future Goals
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Portfolio quality styling
+Landing Page
+Allow user to edit the tasks in case of typo, besides just simply toggle the reminder
+Users auth
 
-## Running end-to-end tests
+## Challenges
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Angular is a big framework, the learning curve is stiffer than React because there are more to it. One of the challenges is how to manage the files and the logic between each components, which I found that sudo coding will help a lot.
+The concepts behind subscription and subject are quite confusing but reading over the doc can also help with explaining some of the concepts. 
